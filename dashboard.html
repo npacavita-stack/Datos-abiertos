@@ -1,3 +1,0 @@
-⋯
-  Edit file
-  Delete file 🗑
