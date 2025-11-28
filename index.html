@@ -80,3 +80,122 @@
             padding: 20px;
             text-align: center;
             font-size: 14px;
+        }
+
+        /* DASHBOARD PAGE STYLE */
+        #dashboard {
+            display: none;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+        }
+
+    </style>
+
+    <script>
+        function openDashboard() {
+            document.getElementById("dashboard").style.display = "block";
+            window.location.href = "#dashboard";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>SENSOR CERO</h1>
+    <p>Análisis integrado de datos abiertos para la seguridad vial en Colombia</p>
+</header>
+
+
+<div class="container">
+
+    <!-- BOTONES -->
+    <div class="buttons">
+        <a href="#intro" class="btn">Introducción</a>
+        <a href="#datos" class="btn">Información Recolectada</a>
+        <a onclick="openDashboard()" class="btn">Dashboard Power BI</a>
+    </div>
+
+    <!-- INTRODUCCIÓN -->
+    <section id="intro" class="section-box">
+        <h2>Introducción</h2>
+
+        <p><strong>En Colombia, los datos abiertos hablan… pero nadie los escucha juntos.</strong><br>
+        La información sobre accidentes, mortalidad vial y parque automotor existe, pero aislada. Por eso, la seguridad vial avanza a ciegas.</p>
+
+        <p><em>“En Colombia no nos faltan datos; nos faltan decisiones basadas en datos.”</em></p>
+
+        <h3>RETO</h3>
+        <p>Existen datos sobre siniestralidad, parques automotores y mortalidad vial, pero están distribuidos en bases separadas, con estructuras diferentes y sin un hilo conductor que permita entender qué pasa, dónde pasa y por qué pasa.</p>
+
+        <p>El resultado: recursos mal invertidos, campañas genéricas y vidas perdidas evitables.</p>
+
+        <h3>INNOVACIÓN</h3>
+        <p>SENSOR CERO es un proceso metodológico de análisis desarrollado por cuatro personas, convirtiendo datos dispersos en evidencia clara para decisiones focalizadas en seguridad vial.</p>
+
+        <p>El equipo dedicó días a:</p>
+        <ul>
+            <li>Descargar bases públicas</li>
+            <li>Limpiar y estandarizar datos</li>
+            <li>Relacionar postes, rutas y categorías</li>
+            <li>Cruzar variables críticas</li>
+            <li>Detectar patrones y puntos críticos</li>
+            <li>Crear una matriz única de inteligencia de riesgo</li>
+        </ul>
+
+        <p><em>“Todo el proceso fue realizado sin sistemas automáticos ni algoritmos avanzados.”</em></p>
+
+        <h3>RESULTADOS</h3>
+        <p>SENSOR CERO detecta riesgos críticos cruzando evidencia disponible y construyendo un mapa inteligente de riesgo vial.</p>
+
+        <p>Responde preguntas como:</p>
+        <ul>
+            <li>¿Qué vehículo está involucrado?</li>
+            <li>¿Cuál es el estado de la vía?</li>
+            <li>¿Qué causa lo explica?</li>
+            <li>¿Qué parque automotor circula allí?</li>
+        </ul>
+
+        <p>Sin algoritmos complejos.  
+        Son datos abiertos convertidos en decisiones claras.</p>
+
+        <h3>CIERRE</h3>
+        <p><strong>CERO improvisación.</strong><br>
+        No se trata de adivinar, sino de conectar la evidencia.</p>
+
+        <p>SENSOR CERO identifica los focos reales donde las decisiones públicas pueden salvar vidas.</p>
+    </section>
+
+
+    <!-- INFORMACIÓN RECOLECTADA -->
+    <section id="datos" class="section-box">
+        <h2>Información Recolectada</h2>
+        <p>Aquí puedes describir brevemente las fuentes de datos, bases limpias y los cruces realizados.</p>
+    </section>
+
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section-box">
+        <h2>Dashboard Power BI</h2>
+
+        <iframe title="Dashboard Sensor Cero"
+        src="https://app.powerbi.com/reportEmbed?reportId=8d596937-c6c9-4923-8f02-0fe8c7bf79cd&autoAuth=true&ctid=d4227148-4930-4f06-8baa-0845ff57e541"
+        allowFullScreen="true"></iframe>
+
+    </section>
+
+</div>
+
+
+<footer>
+    SENSOR CERO • Datos Abiertos Colombia • 2025
+</footer>
+
+</body>
+</html>
