@@ -1,224 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SENSOR CERO — Datos Abiertos Colombia</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SENSOR CERO — Datos Abiertos</title>
 
 <style>
     body {
-        margin: 0;
         font-family: Arial, sans-serif;
-        background: #EEF5FF;
+        background: #eaf3ff;
+        margin: 0;
+        padding: 0;
         color: #003366;
     }
 
-    header {
-        background: #003366;
-        padding: 25px;
-        text-align: center;
-        color: white;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 1100px;
-        margin: auto;
-        padding: 20px 0;
-    }
-
-    h2 {
+    h1, h2 {
         color: #003366;
-        border-left: 6px solid #FFC107;
-        padding-left: 10px;
-        font-size: 26px;
+        margin-bottom: 10px;
     }
 
     .section-box {
         background: white;
-        padding: 25px;
+        padding: 35px;
+        margin: 25px auto;
+        width: 85%;
         border-radius: 12px;
-        margin-top: 25px;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
-    .btn {
-        background: #4EA5FF;
-        color: white;
-        padding: 14px 22px;
-        border-radius: 6px;
-        text-decoration: none;
+    /* BOTONES PRINCIPALES */
+    .top-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+
+    .main-btn {
+        background: #4aa8ff;
+        color: #003366;
+        padding: 14px 28px;
         font-weight: bold;
-        display: block;
-        margin: 10px 0;
-        text-align: left;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
         transition: 0.3s;
     }
 
-    .btn:hover {
-        background: #0077CC;
+    .main-btn:hover {
+        background: #72c5ff;
     }
 
-    .reto-btn, .pdf-btn {
-        background: #5BC0FF;
+    /* BOTONES AZULES DE LA SECCIÓN INFERIOR */
+    .pdf-btn, .reto-btn {
+        display: block;
+        background: #72c5ff;
         color: #003366;
         padding: 16px;
-        margin-top: 10px;
-        border-radius: 6px;
-        display: block;
+        margin: 12px 0;
         text-decoration: none;
+        border-radius: 8px;
         font-weight: bold;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
         transition: 0.3s;
     }
-
-    .reto-btn:hover, .pdf-btn:hover {
-        background: #0099DD;
-        color: white;
+    .pdf-btn:hover, .reto-btn:hover {
+        background: #9bd7ff;
     }
 
+    /* SUBCONTENEDORES */
     .toggle-box {
         display: none;
-        margin-left: 15px;
+        padding-left: 20px;
+        margin-top: 10px;
     }
 
-    footer {
-        margin-top: 40px;
-        padding: 20px;
-        text-align: center;
-        background: #003366;
-        color: white;
-    }
 </style>
 
+<script>
+    function toggleDocs() {
+        let box = document.getElementById("docsBox");
+        box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleReto() {
+        let box = document.getElementById("retoBox");
+        box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+
+    function scrollToInfo() {
+        document.getElementById("infoSection").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
 </head>
+
 <body>
 
-<header>SENSOR CERO — Seguridad Vial con Datos Abiertos</header>
+<!-- BOTONES PRINCIPALES -->
+<div class="top-buttons">
+    <a class="main-btn" href="https://drive.google.com/uc?export=download&id=18cRiloTpZyBB00AxonLZCxzNIhjeB1ql">
+        📊 Descargar Dashboard Power BI
+    </a>
 
-<div class="container">
+    <a class="main-btn" href="#" onclick="scrollToInfo()">
+        📁 Ver Información Recolectada
+    </a>
 
-    <!-- INTRODUCCIÓN -->
-    <section class="section-box">
-        <h2>Introducción</h2>
-        <p>
-        En Colombia, los datos abiertos hablan… pero nadie los escucha juntos.  
-        La información sobre accidentes, mortalidad vial y parque automotor existe, pero aislada.  
-        Por eso, la seguridad vial avanza a ciegas.
-        </p>
+    <a class="main-btn" href="#solucion">
+        💡 Ver Solución del Proyecto
+    </a>
+</div>
 
-        <p><b>“En Colombia no nos faltan datos; nos faltan decisiones basadas en datos.”</b></p>
+<!-- SECCIÓN DE TEXTO -->
+<div class="section-box" id="solucion">
 
-        <h2>Reto</h2>
-        <p>
-        Existen datos sobre siniestralidad, parque automotor y mortalidad vial, 
-        pero están distribuidos en bases separadas, con estructuras distintas.  
-        Esto impide entender qué pasa, dónde pasa y por qué pasa.
-        </p>
+<h1>🔍 SENSOR CERO — Seguridad Vial Basada en Evidencia</h1>
 
-        <h2>Innovación</h2>
-        <p>
-        SENSOR CERO es un proceso metodológico manual realizado por cuatro personas, que integró datos dispersos en una única matriz de riesgo vial.  
-        Sin inteligencia artificial pesada. Sin automatización. Solo análisis humano, criterio técnico y rigor metodológico.
-        </p>
+<h2>Introducción</h2>
+<p>
+En Colombia, los datos abiertos hablan… pero nadie los escucha juntos. La información sobre accidentes, mortalidad vial y parque automotor existe, pero aislada.
+Por eso, la seguridad vial avanza a ciegas.
+</p>
+<p><i>“En Colombia no nos faltan datos; nos faltan decisiones basadas en datos.”</i></p>
 
-        <h2>Resultados</h2>
-        <p>
-        SENSOR CERO detecta riesgos críticos creando un mapa inteligente de riesgo vial que responde:
-        </p>
-        <ul>
-            <li>¿Qué vehículo está involucrado?</li>
-            <li>¿Cuál es el estado de la vía?</li>
-            <li>¿Qué causa explica el siniestro?</li>
-            <li>¿Qué parque automotor circula allí?</li>
-        </ul>
+<h2>Reto</h2>
+<p>
+Existen datos sobre siniestralidad, parques automotores y mortalidad vial, pero están distribuidos en bases separadas, con estructuras diferentes, sin un hilo conductor que permita entender qué pasa, dónde pasa y por qué pasa.
+Por eso se actúa desde la intuición, experiencia o percepciones.
+El resultado: recursos mal invertidos, campañas genéricas y vidas pérdidas evitables.
+</p>
 
-        <p>
-        Sin algoritmos complejos. Sin opacidad.  
-        Son datos abiertos convertidos en decisiones claras.
-        </p>
-    </section>
+<h2>Innovación</h2>
+<p>
+Es un proceso metodológico de análisis, desarrollado por cuatro personas, que logró convertir datos dispersos en evidencia clara para tomar decisiones focalizadas en seguridad vial.
+El equipo detrás de SENSOR CERO dedicó días a un trabajo meticuloso y altamente técnico:
+</p>
 
-    <!-- INFORMACIÓN RECOLECTADA -->
-    <section class="section-box">
-        <h2>Información Recolectada</h2>
+<ul>
+    <li>Descargando diferentes bases públicas</li>
+    <li>Limpiando y estandarizando datos</li>
+    <li>Estableciendo relaciones entre postes, rutas y categorías</li>
+    <li>Cruzando variables críticas entre datasets</li>
+    <li>Identificando patrones, puntos críticos y actores de mayor riesgo</li>
+    <li>Sintetizando toda la complejidad en una única matriz de inteligencia de riesgo</li>
+</ul>
 
-        <p>A continuación puedes acceder a los documentos y bases utilizadas en el proyecto:</p>
+<p>
+Este proceso permitió transformar datos que antes no conversaban entre sí en una visión clara y accionable del riesgo vial, para identificar los focos reales donde las decisiones públicas pueden salvar vidas.
+</p>
 
-        <!-- BOTÓN 1 — BASES DEL RETO -->
-        <a class="btn" href="#!" onclick="toggleReto()">📂 Bases de Datos del Reto</a>
+<p><i>“Todo el proceso fue realizado sin sistemas automáticos ni algoritmos avanzados.”</i></p>
 
-        <div id="retoBox" class="toggle-box">
-            <a class="reto-btn" target="_blank" 
-               href="https://www.datos.gov.co/Transporte/ACCIDENTES-DE-TRANSITO-DESDE-MARZO-2017-A-DICIEMBR/wacd-xkg8/about_data">
-               🚑 Accidentes de Tránsito desde 2017
-            </a>
+<h2>Resultados</h2>
+<p>
+SENSOR CERO nace como un “sensor analítico” en busca de detectar un riesgo crítico al cruzar la evidencia ya disponible.
+Cada punto crítico del país se convierte en una señal clara. Este cruce permite crear un mapa inteligente de riesgo vial que responde:
+</p>
 
-            <a class="reto-btn" target="_blank" 
-               href="https://www.datos.gov.co/Transporte/Sectores-cr-ticos-mortalidad-2022/ybqk-8s42/about_data">
-               ⚠ Sectores Críticos de Mortalidad 2022
-            </a>
+<ul>
+    <li>¿Qué vehículo está involucrado?</li>
+    <li>¿Cuál es el estado de la vía?</li>
+    <li>¿Qué causa lo explica?</li>
+    <li>¿Qué tipo de parque automotor circula allí?</li>
+</ul>
 
-            <a class="reto-btn" target="_blank" 
-               href="https://www.datos.gov.co/Transporte/Veh-culos-matriculados-desde-enero-de-2020-hasta-m/bj7e-xc9g/about_data">
-               🚘 Vehículos Matriculados 2020–2024
-            </a>
-        </div>
+<p>
+Sin algoritmos complejos. Sin opacidad. Sin adivinanzas.  
+Son datos abiertos convertidos en decisiones claras.
+</p>
 
-        <!-- BOTÓN 2 — DOCUMENTOS RECOLECTADOS -->
-        <a class="btn" href="#!" onclick="toggleDocs()">📘 Documentación del Proyecto</a>
+<p>
+Permite focalizar acciones inmediatas, dirigir operativos, reforzar infraestructura y comunicar con precisión.
+</p>
 
-        <div id="docsBox" class="toggle-box">
+<p>
+Porque cuando los datos detectan riesgo, el país puede caminar hacia una sola meta:  
+<b>CERO improvisación.</b><br>
+No se trata de adivinar, sino de conectar la evidencia.
+</p>
 
-            <a class="reto-btn" target="_blank" href="DOCUMENTACION.md">
-                📄 Documentación — Proceso de Limpieza y Análisis
-            </a>
-
-            <a class="reto-btn" target="_blank" href="https://github.com/Pevb1014/DatosAbiertos">
-                🔗 Documentación Complementaria — Equipo
-            </a>
-
-        </div>
-
-        <!-- Botones directos (NO colapsables) -->
-        <a class="pdf-btn" target="_blank"
-       href="https://drive.google.com/file/d/1p4R1gackS7CO6sGHfAf83GSVc4JOj8eh/view?usp=drive_link">
-        📘 Cartilla de Red Vial Departamental
-        </a>
-
-        <a class="pdf-btn" target="_blank"
-       href="https://docs.google.com/spreadsheets/d/1bwN8oTXk0u3E4IzXUoxefaSTpjzgdIGK/">
-        📊 Datos del Observatorio Nacional
-        </a>
-
-        <a class="pdf-btn" target="_blank"
-       href="https://drive.google.com/drive/folders/1rFGe6Pc4gEc0du4yPg_z6iQ79I-SLGyl?usp=drive_link">
-        📂 Ver CSV del Proyecto
-        </a>
-
-    </section>
+<p>
+SENSOR CERO es un proceso manual de análisis de datos abiertos realizado por cuatro personas, que cruzó información dispersa sobre siniestralidad y parque automotor para identificar los focos reales donde las decisiones públicas pueden salvar vidas.
+No es tecnología compleja: es evidencia organizada con precisión.
+</p>
 
 </div>
 
-<footer>SENSOR CERO • Datos Abiertos Colombia • 2025</footer>
 
-<script>
-function toggleReto() {
-    toggle("retoBox");
-}
-function toggleDocs() {
-    toggle("docsBox");
-}
-function toggleRecolectada() {
-    toggle("infoBox");
-}
+<!-- SECCIÓN INFERIOR — INFORMACIÓN RECOLECTADA -->
+<div class="section-box" id="infoSection">
+<h2>Información Recolectada</h2>
+<p>A continuación puedes acceder a los documentos y bases utilizadas en el proyecto:</p>
 
-function toggle(id){
-    const box = document.getElementById(id);
-    box.style.display = box.style.display === "none" ? "block" : "none";
-}
-</script>
+<!-- 1. CARTILLA -->
+<a class="pdf-btn" target="_blank"
+href="https://drive.google.com/file/d/1p4R1gackS7CO6sGHfAF8G3SVc4J0j8eh/view?usp=drive_link">
+📘 Cartilla de Red Vial Departamental
+</a>
+
+<!-- 2. OBSERVATORIO -->
+<a class="pdf-btn" target="_blank"
+href="https://docs.google.com/spreadsheets/d/1bwN8oTKx0u3E4IZxUoxefaSTpjzgdIGK/">
+📊 Datos del Observatorio Nacional
+</a>
+
+<!-- 3. NUEVO BOTÓN — CAMPAÑAS VIALES -->
+<a class="pdf-btn" target="_blank"
+href="https://drive.google.com/file/d/18cthkF4yZmh2WHpgY3Lat3PSD1nIPtL3/view?usp=drive_link">
+🚧 Campañas Viales
+</a>
+
+<!-- 4. BASES DE DATOS DEL RETO (COLAPSABLE) -->
+<a class="pdf-btn" href="#" onclick="toggleReto()">📁 Bases de Datos del Reto</a>
+
+<div id="retoBox" class="toggle-box">
+    <a class="reto-btn" target="_blank"
+       href="https://www.datos.gov.co/Transporte/ACCIDENTES-DE-TRANSITO-DESDE-MARZO-2017-A-DICIEMBR/wacd-xkg8/about_data">🚨 Accidentes de Tránsito</a>
+
+    <a class="reto-btn" target="_blank"
+       href="https://www.datos.gov.co/Transporte/Sectores-cr-ticos-mortalidad-2022/ybqk-8s42/about_data">⚠ Sectores Críticos de Mortalidad</a>
+
+    <a class="reto-btn" target="_blank"
+       href="https://www.datos.gov.co/Transporte/Veh-culos-matriculados-desde-enero-de-2020-hasta-m/bj7e-xc9g/about_data">🚗 Vehículos Matriculados</a>
+</div>
+
+<!-- 5. CSV DEL PROYECTO -->
+<a class="pdf-btn" target="_blank"
+href="https://drive.google.com/drive/folders/1rFGe6Pc4gEc0du4yPg_z6iQ79I-SLGyl?usp=drive_link">
+📄 Ver CSV del Proyecto
+</a>
+
+<!-- 6. DOCUMENTACIÓN (COLAPSABLE) -->
+<a class="pdf-btn" href="#" onclick="toggleDocs()">📚 Documentación del Proyecto</a>
+
+<div id="docsBox" class="toggle-box">
+
+    <a class="reto-btn" target="_blank" href="DOCUMENTACION.md">
+    🧹 Documentación — Proceso de Limpieza y Análisis
+    </a>
+
+    <a class="reto-btn" target="_blank"
+       href="https://github.com/Pevb1014/DatosAbiertos">
+    🔗 Documentación Complementaria — Equipo
+    </a>
+</div>
+
+</div>
+
+<footer style="text-align:center; padding:30px; color:#003366;">
+    SENSOR CERO • Datos Abiertos Colombia • 2025
+</footer>
 
 </body>
 </html>
