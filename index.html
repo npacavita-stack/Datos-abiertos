@@ -72,6 +72,30 @@
             box-shadow: 0 3px 6px rgba(0,0,0,0.08);
         }
 
+        .pdf-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .pdf-btn {
+            background: #F5C518;
+            color: #0A2342;
+            text-align: center;
+            padding: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: 0.3s;
+            border: 2px solid #1C4E80;
+        }
+
+        .pdf-btn:hover {
+            background: #1C4E80;
+            color: white;
+        }
+
         footer {
             margin-top: 50px;
             background: #0A2342;
@@ -92,10 +116,10 @@
 
 <div class="container">
 
-    <!-- BOTONES -->
+    <!-- BOTONES PRINCIPALES -->
     <div class="buttons">
         <a href="#intro" class="btn">Introducción</a>
-        <a href="#datos" class="btn">Información Recolectada</a>
+        <a href="#info-data" class="btn">Información Recolectada</a>
         <a href="https://drive.google.com/uc?export=download&id=18cRiloTpZyBB00AxonLZCxzNIhjeB1ql" class="btn" download>
             Descargar Dashboard Power BI
         </a>
@@ -190,18 +214,23 @@
     </section>
 
     <!-- INFORMACIÓN RECOLECTADA -->
-    <section id="datos" class="section-box">
+    <section id="info-data" class="section-box">
         <h2>Información Recolectada</h2>
-        <p>
-            Se utilizaron bases oficiales de datos abiertos sobre accidentalidad, parque automotor 
-            y mortalidad vial.  
-            Estas bases fueron limpiadas, estandarizadas y cruzadas para permitir la identificación 
-            de patrones críticos y zonas de riesgo vial.
-        </p>
-        <p>
-            Posteriormente, se integraron variables clave relacionadas con vehículos, tipos de vías, 
-            causas probables, geometría vial y comportamiento del parque automotor.
-        </p>
+        <p>A continuación puedes acceder a las bases e insumos oficiales utilizados en el proyecto:</p>
+
+        <div class="pdf-buttons">
+            <a class="pdf-btn" 
+               href="https://drive.google.com/file/d/1p4R1gackS7CO6sGHfAf83GSVc4JOj8eh/view?usp=drive_link" 
+               target="_blank">
+               📘 Cartilla de Red Vial Departamental
+            </a>
+
+            <a class="pdf-btn" 
+               href="https://docs.google.com/spreadsheets/d/1bwN8oTXk0u3E4IzXUoxefaSTpjzgdIGK/edit?usp=drive_link&ouid=103916641852669699467&rtpof=true&sd=true" 
+               target="_blank">
+               📊 Datos del Observatorio Nacional
+            </a>
+        </div>
     </section>
 
 </div>
