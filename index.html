@@ -64,7 +64,6 @@
             background: #0A2342;
         }
 
-        /* Caja de sección */
         .section-box {
             background: white;
             padding: 25px;
@@ -81,28 +80,7 @@
             text-align: center;
             font-size: 14px;
         }
-
-        /* DASHBOARD PAGE STYLE */
-        #dashboard {
-            display: none;
-            padding: 20px;
-        }
-
-        iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 8px;
-        }
-
     </style>
-
-    <script>
-        function openDashboard() {
-            document.getElementById("dashboard").style.display = "block";
-            window.location.href = "#dashboard";
-        }
-    </script>
 </head>
 
 <body>
@@ -112,14 +90,15 @@
     <p>Análisis integrado de datos abiertos para la seguridad vial en Colombia</p>
 </header>
 
-
 <div class="container">
 
     <!-- BOTONES -->
     <div class="buttons">
         <a href="#intro" class="btn">Introducción</a>
         <a href="#datos" class="btn">Información Recolectada</a>
-        <a onclick="openDashboard()" class="btn">Dashboard Power BI</a>
+        <a href="https://drive.google.com/uc?export=download&id=18cRiloTpZyBB00AxonLZCxzNIhjeB1ql" class="btn" download>
+            Descargar Dashboard Power BI
+        </a>
     </div>
 
     <!-- INTRODUCCIÓN -->
@@ -127,34 +106,65 @@
         <h2>Introducción</h2>
 
         <p><strong>En Colombia, los datos abiertos hablan… pero nadie los escucha juntos.</strong><br>
-        La información sobre accidentes, mortalidad vial y parque automotor existe, pero aislada. Por eso, la seguridad vial avanza a ciegas.</p>
+        La información sobre accidentes, mortalidad vial y parque automotor existe, pero aislada.  
+        Por eso, la seguridad vial avanza a ciegas.</p>
 
         <p><em>“En Colombia no nos faltan datos; nos faltan decisiones basadas en datos.”</em></p>
 
         <h3>RETO</h3>
-        <p>Existen datos sobre siniestralidad, parques automotores y mortalidad vial, pero están distribuidos en bases separadas, con estructuras diferentes y sin un hilo conductor que permita entender qué pasa, dónde pasa y por qué pasa.</p>
+        <p>
+            Existen datos sobre siniestralidad, parques automotores y mortalidad vial, pero están distribuidos 
+            en bases separadas, con estructuras diferentes y sin un hilo conductor que permita entender 
+            qué pasa, dónde pasa y por qué pasa.
+        </p>
 
-        <p>El resultado: recursos mal invertidos, campañas genéricas y vidas perdidas evitables.</p>
+        <p>
+            Hoy se actúa desde la intuición, la experiencia o percepciones.  
+            El resultado: recursos mal invertidos, campañas genéricas y vidas perdidas evitables.
+        </p>
 
         <h3>INNOVACIÓN</h3>
-        <p>SENSOR CERO es un proceso metodológico de análisis desarrollado por cuatro personas, convirtiendo datos dispersos en evidencia clara para decisiones focalizadas en seguridad vial.</p>
+        <p>
+            SENSOR CERO es un proceso metodológico de análisis desarrollado por cuatro personas, 
+            convirtiendo datos dispersos en evidencia clara para decisiones focalizadas en seguridad vial.
+        </p>
 
         <p>El equipo dedicó días a:</p>
+
         <ul>
-            <li>Descargar bases públicas</li>
+            <li>Descargar diferentes bases públicas</li>
             <li>Limpiar y estandarizar datos</li>
             <li>Relacionar postes, rutas y categorías</li>
-            <li>Cruzar variables críticas</li>
-            <li>Detectar patrones y puntos críticos</li>
-            <li>Crear una matriz única de inteligencia de riesgo</li>
+            <li>Cruzar variables críticas entre datasets</li>
+            <li>Identificar patrones, puntos críticos y actores de mayor riesgo</li>
+            <li>Sintetizar toda la complejidad en una matriz única de inteligencia de riesgo</li>
         </ul>
+
+        <p>
+            Este proceso permitió transformar datos que antes no conversaban entre sí en una visión clara, 
+            precisa y accionable del riesgo vial.
+        </p>
 
         <p><em>“Todo el proceso fue realizado sin sistemas automáticos ni algoritmos avanzados.”</em></p>
 
+        <ul>
+            <li>Es innovador sin depender de IA pesada</li>
+            <li>Es reproducible por cualquier entidad</li>
+            <li>Resultados visuales y prácticos</li>
+            <li>Escalable a municipios, departamentos y nación</li>
+            <li>Bajo costo — alto impacto</li>
+        </ul>
+
+        <p>Fue el resultado de análisis humano y rigor metodológico.</p>
+
         <h3>RESULTADOS</h3>
-        <p>SENSOR CERO detecta riesgos críticos cruzando evidencia disponible y construyendo un mapa inteligente de riesgo vial.</p>
+        <p>
+            SENSOR CERO detecta riesgos críticos cruzando evidencia disponible, 
+            creando un mapa inteligente de riesgo vial.
+        </p>
 
         <p>Responde preguntas como:</p>
+
         <ul>
             <li>¿Qué vehículo está involucrado?</li>
             <li>¿Cuál es el estado de la vía?</li>
@@ -162,35 +172,39 @@
             <li>¿Qué parque automotor circula allí?</li>
         </ul>
 
-        <p>Sin algoritmos complejos.  
-        Son datos abiertos convertidos en decisiones claras.</p>
+        <p>
+            Sin algoritmos complejos.  
+            Son datos abiertos convertidos en decisiones claras.
+        </p>
 
-        <p><strong>CERO improvisación.</strong><br>
-        No se trata de adivinar, sino de conectar la evidencia.</p>
+        <p>
+            Permite focalizar acciones inmediatas, dirigir operativos, reforzar infraestructura 
+            y comunicar con precisión.
+        </p>
 
-        <p>SENSOR CERO identifica los focos reales donde las decisiones públicas pueden salvar vidas.</p>
+        <p>
+            Porque cuando los datos detectan riesgo, el país puede avanzar hacia una meta común:  
+            <strong>CERO improvisación.</strong><br>
+            No se trata de adivinar, sino de conectar la evidencia.
+        </p>
     </section>
-
 
     <!-- INFORMACIÓN RECOLECTADA -->
     <section id="datos" class="section-box">
         <h2>Información Recolectada</h2>
-        <p>Aquí puedes describir brevemente las fuentes de datos, bases limpias y los cruces realizados.</p>
-    </section>
-
-
-    <!-- DASHBOARD -->
-    <section id="dashboard" class="section-box">
-        <h2>Dashboard Power BI</h2>
-
-        <iframe title="Dashboard Sensor Cero"
-        src="https://app.powerbi.com/reportEmbed?reportId=8d596937-c6c9-4923-8f02-0fe8c7bf79cd&autoAuth=true&ctid=d4227148-4930-4f06-8baa-0845ff57e541"
-        allowFullScreen="true"></iframe>
-
+        <p>
+            Se utilizaron bases oficiales de datos abiertos sobre accidentalidad, parque automotor 
+            y mortalidad vial.  
+            Estas bases fueron limpiadas, estandarizadas y cruzadas para permitir la identificación 
+            de patrones críticos y zonas de riesgo vial.
+        </p>
+        <p>
+            Posteriormente, se integraron variables clave relacionadas con vehículos, tipos de vías, 
+            causas probables, geometría vial y comportamiento del parque automotor.
+        </p>
     </section>
 
 </div>
-
 
 <footer>
     SENSOR CERO • Datos Abiertos Colombia • 2025
